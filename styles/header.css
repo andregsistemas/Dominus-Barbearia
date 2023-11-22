@@ -1,0 +1,88 @@
+.cabecalho {
+    display: flex;
+    align-items: center;
+    padding: 1.5em 20em;
+    background-color: var(--verde-oliva);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.cabecalho-lista {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-basis: 60%;
+    font-size: 18px;
+    margin: 0 2em;
+}
+
+.cabecalho__logo {
+    content: url(../img/logo.png);
+    height: 100px; 
+}
+
+.cabecalho__pesquisa {
+    border: 2px solid #000000;
+    border-radius: 20px;
+    padding: .7em 1em;
+    width: 20vw;
+}
+
+.cabecalho__pesquisa::placeholder {
+    font-size: 18px;
+    background: url("../img/ícone\ busca.png") no-repeat right center;
+}
+
+.cabecalho-lista__item a {
+    text-decoration: none;
+}
+
+.cabecalho-lista__link {
+    color: var(--fonte-menu);
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.cabecalho-lista__link:hover {
+    color: var(--fonte-menu-hover);
+    transition: 0.3s;
+    border-bottom: var(--fonte-menu-hover) solid 3px;
+}
+
+.cabecalho-lista__item--imagem {
+    height: 20px;
+    width: 20px;
+    padding-right: 5px;
+    filter: invert(100%);
+}
+
+.cabecalho-lista__item-botao {
+    font-size: 25px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    padding: .5em .5em;
+    color: var(--fonte-menu);
+    background-color: var(--fonte-menu-hover);
+}
+
+.cabecalho-lista__item-botao--instagram {
+    
+    color: var(--fonte-menu);
+    content: url(../img/Instagram.png);
+}
+
+@media screen and (max-width: 900px) {
+    .cabecalho {
+        margin: 2em;
+    }
+
+    .cabecalho__pesquisa,
+    .cabecalho-lista__link {
+        display: none;
+    }
+
+    .cabecalho-lista__item-botao {
+        display: block;
+    }
+}

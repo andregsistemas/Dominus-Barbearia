@@ -1,0 +1,26 @@
+@import url('./header.css');
+@import url('./footer.css');
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
+
+
+:root {
+    --fonte-principal:'Pathway Gothic One', sans-serif;
+    --fonte-logo: 'Inter', sans-serif;
+    --azul-claro: #6BD1FF;
+    --preto: #000000;
+    --branco: #FFFFFF;
+    --verde-oliva: #739072;
+    --fonte-menu: #ECE3CE;
+    --fonte-menu-hover: #A7734C;
+    --section-color: #f7f3eb;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    color: var(--preto);
+    font-size: 16px;
+}
+
+.cabecalho__logo-link {
+    text-decoration: none;
+}
