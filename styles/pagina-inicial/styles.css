@@ -125,23 +125,53 @@
 
 .lista-servicos {
     display: flex;
+    gap: 1rem;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 4em 0;
+    justify-content: center;
+    
+    
+}
+
+.item-servicos {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto repeat(2, 1fr) auto;
+    grid-template-areas:
+        "imagem imagem"
+        "titulo titulo"
+        "texto texto"
+        "botao botao"
+    ;
+    background-color: var(--verde-oliva);
+    border: 3px solid var(--fonte-menu-hover);
+}
+
+.item-servicos__imagem {
+    grid-area: imagem;
+    width: 150px;
+    height: auto;
+    max-width: 100%;
+    
 }
 
 .item-servicos__titulo {
-    background-color: var(--preto);
-    color: var(--branco);
+    grid-area: titulo;
+    align-self: center;
+    color: var(--preto);
     font-weight: 600;
     font-size: 24px;
     text-align: center;
     padding: .5em 0;
-    border-radius: 0px 0px 20px 20px;
 }
 
-.item-servicos__imagem {
-    display: block;
+.item-servicos h4 {
+    grid-area: texto;
+    
+    
+}
+
+.item-servicos h5 {
+    grid-area: botao;
 }
 
 .conta {
